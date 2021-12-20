@@ -1,0 +1,65 @@
+.together {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title { 
+        width: 35%;
+        font-family: Ibarra Real Nova;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 42px;
+        /* or 105% */
+        letter-spacing: -0.357143px;
+        color: #33323D;
+    }
+    &__link {            
+        text-decoration: none;
+        font-size: 12px;
+        padding: 10px;
+        line-height: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(51, 50, 61, 1);
+        border: 1px solid black;
+        &:hover {
+            background: black;
+            color: white;
+        }
+        &:active {
+            box-shadow: 0 0 10px black;
+        }
+    }
+    .line {
+        height: 1px;
+        width: 390px;
+        background-color:rgb(194, 193, 193);
+    }
+}
+@media screen and (max-width: 992px) {
+    .together {
+        &__title {
+            width: 50%;
+        }
+        .line {
+            height: 1px;
+            width: 140px;
+            background-color:rgb(194, 193, 193);
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .together {
+        flex-direction: column;
+        align-items: center;
+
+        &__title {
+            text-align: center;
+            width: 100%;
+        }
+        .line {
+            display: none;
+        }
+    }
+}
